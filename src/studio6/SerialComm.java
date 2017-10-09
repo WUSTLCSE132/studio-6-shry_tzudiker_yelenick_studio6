@@ -50,14 +50,8 @@ public class SerialComm {
 	}
 	
 	// TODO: Add readByte() method
-	public static byte readByte() {
-		try {
-			return port.readBytes(1)[0];
-		} catch (SerialPortException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return (byte)-1;
-		}
+	public static byte readByte() throws SerialPortException {
+		return port.readBytes(1)[0];
 	}
 	
 	// TODO: Add a main() method
